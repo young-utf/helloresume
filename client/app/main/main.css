@@ -28,3 +28,10 @@
     margin-top: 70px;
     border-top: 1px solid #E5E5E5;
 }
+
+.section {
+  background-attachment: fixed;
+  background-size: auto 80%;
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+}
