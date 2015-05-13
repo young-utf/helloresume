@@ -22,6 +22,19 @@ var ResumeSchema = new Schema({
     default: Date.now
   },
   sort: String,
+  paid: Boolean,
+  opened: {
+    type: Boolean,
+    default: true
+  },
+  checked: [
+    {
+      type: String,
+      user: String,
+      ref: 'User'
+    }
+  ],
+  url: String,
 
   basic: {
     name: String,
