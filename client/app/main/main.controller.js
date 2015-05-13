@@ -1,22 +1,20 @@
 'use strict';
 
 angular.module('helloresumeApp')
-  .controller('MainCtrl', function ($scope, $http) {
-    $scope.awesomeThings = [];
-
-    $http.get('/api/things').success(function(awesomeThings) {
-      $scope.awesomeThings = awesomeThings;
-    });
-
-    $scope.addThing = function() {
-      if($scope.newThing === '') {
-        return;
+  .controller('MainCtrl', function ($scope, $http, $timeout) {
+    $('#pagepiling').pagepiling({
+      menu: '#top-menu',
+      anchors: ['home', 'simple', 'fancy', 'portfolio'],
+      sectionsColor: ['white', 'blue', 'red', 'green'],
+      navigation: {
+        'position': 'none',
+        'tooltips': ['Home', 'Simple', 'Fancy', 'Portfolio']
+      },
+      afterRender: function () {
+        console.log('afterrender');
+      },
+      afterLoad: function () {
+        console.log('hello loader');
       }
-      $http.post('/api/things', { name: $scope.newThing });
-      $scope.newThing = '';
-    };
-
-    $scope.deleteThing = function(thing) {
-      $http.delete('/api/things/' + thing._id);
-    };
+    });
   });
