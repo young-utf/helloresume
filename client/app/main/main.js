@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('helloresumeApp')
+angular.module('HRApp')
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {

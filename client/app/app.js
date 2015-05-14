@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('helloresumeApp', [
+angular.module('HRApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('helloresumeApp')
+angular.module('HRApp')
   .controller('MainCtrl', function ($scope, $http, $timeout) {
     //$('#pagepiling').pagepiling({
     //  menu: '#top-menu',
