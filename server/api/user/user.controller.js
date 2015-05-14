@@ -13,6 +13,25 @@ var Ninja = require('tracer').console({
 });
 
 
+exports.index = function (req, res) {
+  res.json(200);
+};
+
+exports.login = function (req, res) {
+  var promise = User.findOne({email: req.body.email}).exec();
+  promise.then(function (user) {
+    if (user) {
+      var result = user.authenticate(req.body.password);
+      Ninja.debug(result);
+      if (result) {
+        res.json(user);
+      } else {
+        res.status(401).json({name: 'Password', message: 'Wrong Password'})
+      }
+    }
+  });
+};
+
 exports.create = function (req, res) {
   Ninja.debug(req.body);
 
@@ -31,6 +50,19 @@ exports.create = function (req, res) {
           res.json(user);
         }
       });
+    }
+  });
+};
+
+exports.getOne = function (req, res) {
+  var userId = req.params.id;
+
+  User.findById(userId, function (err, user) {
+    if (user) {
+      Ninja.debug(user);
+      res.json(user);
+    } else {
+      res.status(404).json({name: 'no user', message: 'No User found'});
     }
   });
 };

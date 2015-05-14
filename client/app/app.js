@@ -20,7 +20,7 @@ angular.module('HRApp', [
       request: function (config) {
         config.headers = config.headers || {};
         if ($cookieStore.get('token')) {
-          config.headers.Authorization = 'Bearer ' + $cookieStore.get('token');
+          config.headers.Authorization = 'HResume ' + $cookieStore.get('token');
         }
         return config;
       },
@@ -28,7 +28,7 @@ angular.module('HRApp', [
       // Intercept 401s and redirect you to login
       responseError: function(response) {
         if(response.status === 401) {
-          $location.path('/login');
+          $location.path('/join');
           // remove any stale tokens
           $cookieStore.remove('token');
           return $q.reject(response);
@@ -39,6 +39,12 @@ angular.module('HRApp', [
       }
     };
   })
-  .run(function () {
-
+  .run(function ($rootScope, Auth, Users) {
+    if (Auth.getToken()) {
+      Users.get(Auth.getToken(), function (user) {
+        if (user) {
+          Auth.login(user);
+        }
+      });
+    }
   });

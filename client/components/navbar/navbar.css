@@ -26,3 +26,28 @@
 .navbar-nav.hr-nb-user {
   float: right;
 }
+
+.hr-nav-ul {
+  float: left;
+  margin: 0;
+  list-style: none;
+}
+
+.hr-nav-ul li {
+  float: left;
+  position: relative;
+  display: block;
+}
+
+.hr-nav-ul li:hover {
+  background: #ddd;
+}
+
+.hr-nav-ul li a {
+  color: #aaa;
+  position: relative;
+  display: block;
+  line-height: 20px;
+  padding: 15px;
+  text-decoration: none;
+}

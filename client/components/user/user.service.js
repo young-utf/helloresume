@@ -5,14 +5,25 @@
 angular.module('HRApp')
   .factory('Users', function ($http, Auth) {
     return {
-      get: function () {
+      validLogin: function (user, successCB, errorCB) {
+        $http.post('/api/users/login', user).success(function (data) {
+          successCB(data);
+        }).error(function (data) {
+          errorCB(data);
+        });
+      },
 
+      get: function (token, cb) {
+        $http.get('/api/users/' + token).success(function (data) {
+          cb(data);
+        });
       },
 
       create: function (user, cb) {
-        console.log(user);
         $http.post('/api/users', user).success(function (data) {
           cb(data);
+        }).error(function (data) {
+          console.log(data);
         });
       }
     }

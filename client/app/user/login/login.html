@@ -1,5 +1,13 @@
 <navbar></navbar>
 
-<div class="login">
-  login page
+<div class="login zoomIn animated">
+  <span>로그인</span>
+  <div class="login-wrap">
+    <form ng-action="submit($event)">
+      <input type="email" ng-model="user.email" placeholder="이메일을 입력해주세요." />
+      <input type="password" ng-model="user.password" placeholder="비밀번호를 입력해주세요." />
+      <input class="btn btn-success" type="submit" ng-click="submit($event)"/>
+    </form>
+  </div>
+
 </div>
