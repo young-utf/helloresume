@@ -1,11 +1,10 @@
 .hr-navbar {
-  float: left;
   width: 100%;
   height: 50px;
   line-height: 50px;
-  background: #e9e9e9;
+  background: #eee;
   padding: 0px 100px;
-  border-bottom: 1px solid #dedede;
+  border-bottom: 1px solid #eaeaea;
 }
 
 .hr-nb-brand {
