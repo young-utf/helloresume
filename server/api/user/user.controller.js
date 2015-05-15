@@ -2,8 +2,6 @@
  * Created by youngmoon on 5/14/15.
  */
 
-
-var mongoose = require('mongoose');
 var User = require('./user.model');
 var tmpUser = require('./tmpUser.model');
 var auth = require('../auth/auth');
@@ -26,8 +24,10 @@ exports.login = function (req, res) {
       if (result) {
         res.json(user);
       } else {
-        res.status(401).json({name: 'Password', message: 'Wrong Password'})
+        res.status(404).json({name: 'Password', message: 'Wrong Password'})
       }
+    } else {
+      res.status(404).json({name: 'User', message: 'No User Found'});
     }
   });
 };

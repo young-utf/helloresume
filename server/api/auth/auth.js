@@ -12,6 +12,9 @@ exports.index = function () {
 };
 
 exports.isLogin = function (req, res, next) {
-  Ninja.debug(req.headers);
-  next();
+  if (req.headers.authorization && req.headers.authorization.indexOf('HResume') > -1) {
+    next();
+  } else {
+    res.status(401).json({message: 'No Authenticated'});
+  }
 };

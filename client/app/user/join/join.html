@@ -4,7 +4,7 @@
   <span>회원가입</span>
   <div class="join-wrap">
     <form ng-action="submit($event)">
-      <input type="text" ng-model="user.name" placeholder="이름을 입력해주세요." />
+      <input type="text" ng-model="user.name" placeholder="이름을 입력해주세요." autofocus />
       <input type="email" ng-model="user.email" placeholder="이메일을 입력해주세요." />
       <input type="password" ng-model="user.password" placeholder="비밀번호를 입력해주세요." />
       <input class="btn btn-success" type="submit" ng-click="submit($event)"/>

@@ -6,13 +6,14 @@ angular.module('HRApp', [
   'ngSanitize',
   'ngRoute'
 ])
-  .config(function ($routeProvider, $locationProvider) {
+  .config(function ($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider
       .otherwise({
         redirectTo: '/'
       });
 
     $locationProvider.html5Mode(true);
+    $httpProvider.interceptors.push('authInterceptor');
   })
   .factory('authInterceptor', function ($rootScope, $q, $cookieStore, $location) {
     return {
@@ -28,7 +29,7 @@ angular.module('HRApp', [
       // Intercept 401s and redirect you to login
       responseError: function(response) {
         if(response.status === 401) {
-          $location.path('/join');
+          $location.path('/login');
           // remove any stale tokens
           $cookieStore.remove('token');
           return $q.reject(response);

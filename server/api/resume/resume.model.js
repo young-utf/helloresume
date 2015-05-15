@@ -17,12 +17,20 @@ var ResumeSchema = new Schema({
     type: String,
     ref: 'User'
   },
-  published: {
+  requestedAt: {
     type: Date,
     default: Date.now
   },
+  publishedAt: {
+    type: Date
+  },
   sort: String,
   paid: Boolean,
+  // Process is divided to new, processing, done
+  process: {
+    type: String,
+    default: 'new'
+  },
   opened: {
     type: Boolean,
     default: true
@@ -35,6 +43,8 @@ var ResumeSchema = new Schema({
     }
   ],
   url: String,
+
+
 
   basic: {
     name: String,
