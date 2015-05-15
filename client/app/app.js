@@ -42,7 +42,7 @@ angular.module('HRApp', [
   })
   .run(function ($rootScope, Auth, Users) {
     if (Auth.getToken()) {
-      Users.get(Auth.getToken(), function (user) {
+      Users.getOne(Auth.getToken(), function (user) {
         if (user) {
           Auth.login(user);
         }

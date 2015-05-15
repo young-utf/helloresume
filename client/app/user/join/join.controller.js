@@ -3,13 +3,14 @@
  */
 
 angular.module('HRApp')
-  .controller('JoinCtrl', function ($scope, Users, Auth) {
+  .controller('JoinCtrl', function ($scope, $location, Users, Auth) {
     $scope.user = {};
 
     $scope.submit = function (e) {
       e.preventDefault();
       Users.create($scope.user, function (data) {
         Auth.login(data);
+        $location.path('/u/' + $rootScope.currentUser._id);
       });
     };
   });

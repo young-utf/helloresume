@@ -13,6 +13,10 @@ var UserSchema = new Schema({
   email: String,
   hashedPassword: String,
   salt: String,
+  role: {
+    type: String,
+    default: 'user'
+  },
   sns: {
     sort: String,
     id: String

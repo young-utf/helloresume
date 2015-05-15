@@ -13,7 +13,13 @@ angular.module('HRApp')
         });
       },
 
-      get: function (token, cb) {
+      get: function (cb) {
+        $http.get('/api/users').success(function (data) {
+          cb(data);
+        });
+      },
+
+      getOne: function (token, cb) {
         $http.get('/api/users/' + token).success(function (data) {
           cb(data);
         });

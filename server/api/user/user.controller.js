@@ -12,7 +12,10 @@ var Ninja = require('tracer').console({
 
 
 exports.index = function (req, res) {
-  res.json(200);
+  var promise = User.find({}).exec();
+  promise.then(function (users) {
+    res.json(users);
+  });
 };
 
 exports.login = function (req, res) {

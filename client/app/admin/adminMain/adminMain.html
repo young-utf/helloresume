@@ -1,0 +1,13 @@
+<navbar></navbar>
+
+<section class="adminMain-wrap" ng-if="adminUser">
+  <div class="am-userList" ng-repeat="user in userList">
+    <div class="am-ul-profile" style="background-image: url({{user.profileImage}})"></div>
+    <div class="am-ul-name">{{user.name}}</div>
+    <div class="am-ul-email">{{user.email}}</div>
+    <div class="am-ul-role">{{user.role}}</div>
+    <div class="am-ul-joined">{{getDate(user.joined)}}</div>
+    <div class="am-ul-showResume">show</div>
+    <div class="am-ul-openResume"><button class="btn btn-warning">openResume</button></div>
+  </div>
+</section>

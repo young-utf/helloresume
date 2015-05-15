@@ -9,6 +9,7 @@ angular.module('HRApp')
       e.preventDefault();
       Users.validLogin($scope.user, function (data) {
         Auth.login(data);
+        $location.path('/u/' + $rootScope.currentUser._id);
       }, function (data) {
         alert(data.message);
       });

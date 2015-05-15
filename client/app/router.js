@@ -9,10 +9,6 @@ angular.module('HRApp')
         templateUrl: 'app/main/main.html',
         controller: 'MainCtrl'
       })
-      .when('/u/:url', {
-        templateUrl: 'app/user/userpage/userpage.html',
-        controller: 'UserpageCtrl'
-      })
       .when('/join', {
         templateUrl: 'app/user/join/join.html',
         controller: 'JoinCtrl'
@@ -20,6 +16,14 @@ angular.module('HRApp')
       .when('/login', {
         templateUrl: 'app/user/login/login.html',
         controller: 'LoginCtrl'
+      })
+      .when('/rList', {
+        templateUrl: 'app/resume/resumeList/resumeList.html',
+        controller: 'ResumeListCtrl'
+      })
+      .when('/admin', {
+        templateUrl: 'app/admin/adminMain/adminMain.html',
+        controller: 'AdminMainCtrl'
       })
       .when('/:resume', {
         templateUrl: 'app/resume/resumeDetail/resumeDetail.html',
@@ -35,8 +39,11 @@ angular.module('HRApp')
         templateUrl: 'app/resume/resumeForm/simple/simpleForm.html',
         controller: 'ResumeSimpleCtrl'
       })
-      .when('/rList', {
-        templateUrl: 'app/resume/resumeList/resumeList.html',
-        controller: 'ResumeListCtrl'
+      .when('/u/:url', {
+        templateUrl: 'app/user/userpage/userpage.html',
+        controller: 'UserpageCtrl'
+      })
+      .otherwise({
+        redirectTo: '/'
       });
   });
