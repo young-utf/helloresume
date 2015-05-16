@@ -18,3 +18,11 @@ exports.isLogin = function (req, res, next) {
     res.status(401).json({message: 'No Authenticated'});
   }
 };
+
+exports.isAdmin = function (req, res, next) {
+  if (req.headers.authorization && req.headers.authorization.indexOf('555577dc7e8046c72a6bdacd')) {
+    next();
+  } else {
+    res.status(401).json({message: 'No Authenticated'});
+  }
+};

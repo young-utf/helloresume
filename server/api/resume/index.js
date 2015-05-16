@@ -6,6 +6,8 @@ var controller = require('./resume.controller');
 var auth = require('../auth/auth');
 var router = express.Router();
 
+router.post('/', auth.isAdmin, controller.createResume);
+
 
 router.get('/id/:rId', controller.getResumeById);
 

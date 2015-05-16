@@ -1,0 +1,8 @@
+<section class="resumeAddDialog">
+
+  <form ng-action="submit($event)">
+    <select ng-options="item.value as item.label for item in values" ng-model="selected">
+
+    <input type="submit" class="btn btn-default" ng-click="submit($event)"/>
+  </form>
+</section>

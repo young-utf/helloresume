@@ -1,39 +1,40 @@
+.adminMain-wrap h2 {
+  text-align: center;
+  margin: 30px;
+}
+
 .am-userList {
-  height: 50px;
-  width: 95%;
-  margin: 10px auto;
-  background: #CFCFCF;
-  display: -webkit-flex;
-  display: flex;
+  cursor: pointer;
 }
 
 .am-userList > div {
-  height: 50px;
-  text-align: center;
-  display: inline-block;
-  line-height: 50px;
+
 }
 
 .am-ul-profile {
-  width: 50px;
+
 }
 
 .am-ul-name {
-  width: 100px;
+
 }
 
 .am-ul-email {
-  width: 200px;
+
 }
 
 .am-ul-role {
-  width: 100px;
+
 }
 
 .am-ul-joined {
-  width: 200px;
+
 }
 
 .am-ul-openResume {
-  width: 100px;
+
+}
+
+.am-ul-resumeList {
+  display: none;
 }

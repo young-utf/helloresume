@@ -20,6 +20,8 @@
       <!-- bower:css -->
       <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
       <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
+      <link rel="stylesheet" href="bower_components/ngDialog/css/ngDialog.css" />
+      <link rel="stylesheet" href="bower_components/ngDialog/css/ngDialog-theme-default.css" />
       <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,client}) app/app.css -->
@@ -58,6 +60,7 @@
       <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
       <script src="bower_components/angular-route/angular-route.js"></script>
       <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+      <script src="bower_components/ngDialog/js/ngDialog.js"></script>
       <!-- endbower -->
     <!-- endbuild -->
 
@@ -70,16 +73,20 @@
           <script src="app/admin/adminMain/adminMain.controller.js"></script>
           <script src="app/main/main.controller.js"></script>
           <script src="app/main/main.js"></script>
-          <script src="app/resume/resume.js"></script>
-          <script src="app/resume/resumeDetail/resumeDetail.controller.js"></script>
-          <script src="app/resume/resumeForm/resumeForm.controller.js"></script>
-          <script src="app/resume/resumeList/resumeList.controller.js"></script>
+          <script src="app/resumeManager/resumeDetail/resumeDetail.controller.js"></script>
+          <script src="app/resumeManager/resumeForm/resumeForm.controller.js"></script>
+          <script src="app/resumeManager/resumeList/resumeList.controller.js"></script>
+          <script src="app/resumeManager/resumeManager.js"></script>
           <script src="app/router.js"></script>
           <script src="app/user/join/join.controller.js"></script>
           <script src="app/user/login/login.controller.js"></script>
           <script src="app/user/user.js"></script>
           <script src="app/user/userpage/userpage.controller.js"></script>
+          <script src="components/dialog/dialog.service.js"></script>
+          <script src="components/dialog/resume/resumeAddDialog.controller.js"></script>
+          <script src="components/dialog/resume/resumeDialog.controller.js"></script>
           <script src="components/navbar/navbar.directive.js"></script>
+          <script src="components/resume/resume.service.js"></script>
           <script src="components/user/auth.service.js"></script>
           <script src="components/user/user.service.js"></script>
           <!-- endinjector -->

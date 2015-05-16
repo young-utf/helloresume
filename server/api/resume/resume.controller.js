@@ -3,6 +3,7 @@
  */
 
 var Resume = require('./resume.model');
+var User = require('../user/user.model');
 var Ninja = require('tracer').console({
   format : "({{file}}:{{line}}) ".red+"≈<>".red.underline+" {{message}}"
 });
@@ -26,5 +27,23 @@ exports.getResumeByUrl = function (req, res) {
       res.status(404).json({message: err});
     }
     res.json(resume);
+  });
+};
+
+exports.createResume = function (req, res) {
+  console.log(req.body);
+  var newResume = new Resume(req.body);
+  newResume.save(function (err, resume) {
+    if (err) {
+      res.json(400);
+    }
+
+    User.findByIdAndUpdate(req.body.user, {$push: {resumes: resume}}, function (err, user) {
+      if (err) {
+        res.json(400);
+      }
+
+      res.json(user);
+    });
   });
 };

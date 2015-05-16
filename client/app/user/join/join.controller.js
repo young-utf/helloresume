@@ -3,7 +3,7 @@
  */
 
 angular.module('HRApp')
-  .controller('JoinCtrl', function ($scope, $location, Users, Auth) {
+  .controller('JoinCtrl', function ($rootScope, $scope, $location, Users, Auth) {
     $scope.user = {};
 
     $scope.submit = function (e) {

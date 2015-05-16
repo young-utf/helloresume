@@ -2,7 +2,7 @@
  * Created by youngmoon on 5/14/15.
  */
 angular.module('HRApp')
-  .controller('LoginCtrl', function ($scope, Users, Auth) {
+  .controller('LoginCtrl', function ($rootScope, $scope, $location, Users, Auth) {
     $scope.user = {};
 
     $scope.submit = function (e) {

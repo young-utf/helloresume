@@ -18,7 +18,7 @@ angular.module('HRApp')
         controller: 'LoginCtrl'
       })
       .when('/rList', {
-        templateUrl: 'app/resume/resumeList/resumeList.html',
+        templateUrl: 'app/resumeManager/resumeList/resumeList.html',
         controller: 'ResumeListCtrl'
       })
       .when('/admin', {
@@ -26,7 +26,7 @@ angular.module('HRApp')
         controller: 'AdminMainCtrl'
       })
       .when('/:resume', {
-        templateUrl: 'app/resume/resumeDetail/resumeDetail.html',
+        templateUrl: 'app/resumeManager/resumeDetail/resumeDetail.html',
         controller: 'ResumeDetailCtrl',
         resolve: {
           wait: function ($route, ResumeService) {
@@ -36,7 +36,7 @@ angular.module('HRApp')
         }
       })
       .when('/form/:rId', {
-        templateUrl: 'app/resume/resumeForm/simple/simpleForm.html',
+        templateUrl: 'app/resumeManager/resumeForm/simple/simpleForm.html',
         controller: 'ResumeSimpleCtrl'
       })
       .when('/u/:url', {
