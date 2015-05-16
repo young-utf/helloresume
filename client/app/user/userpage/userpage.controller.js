@@ -3,6 +3,6 @@
  */
 
 angular.module('HRApp')
-  .controller('UserpageCtrl', function () {
-
+  .controller('UserpageCtrl', function ($rootScope, $scope) {
+    console.log($rootScope.currentUser);
   });

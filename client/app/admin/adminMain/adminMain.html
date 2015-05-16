@@ -24,9 +24,9 @@
         <td class="am-ul-email">{{user.email}}</td>
         <td class="am-ul-role">{{user.role}}</td>
         <td class="am-ul-joined">{{getDate(user.joined)}}</td>
-        <td class="am-ul-showResume" ng-if="user.resume"><button class="btn btn-success" ng-click="showResume(user)">Show Resume</button></td>
-        <td class="am-ul-noResume" ng-if="!user.resume"><button class="btn btn-warning" disabled>No Resume</button></td>
-        <td class="am-ul-openResume"><button class="btn btn-warning" ng-click="addResume(user)">Add Resume</button></td>
+        <td class="am-ul-showResume" ng-if="user.resumes.length > 0"><button class="btn btn-success" ng-click="showResume($index)">Show Resume</button></td>
+        <td class="am-ul-noResume" ng-if="!user.resumes.length > 0"><button class="btn btn-warning" disabled>No Resume</button></td>
+        <td class="am-ul-openResume"><button class="btn btn-warning" ng-click="addResume($index)">Add Resume</button></td>
       </tr>
 
     </tbody>

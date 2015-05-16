@@ -4,5 +4,6 @@
 
 angular.module('HRApp')
   .controller('ResumeDialogCtrl', function ($rootScope, $scope) {
-    console.log($scope.selectedUser);
+    console.log($scope.userList[$scope.userIndex]);
+    $scope.selectedUser = $scope.userList[$scope.userIndex];
   });

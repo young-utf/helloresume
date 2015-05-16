@@ -38,12 +38,16 @@ exports.createResume = function (req, res) {
       res.json(400);
     }
 
-    User.findByIdAndUpdate(req.body.user, {$push: {resumes: resume}}, function (err, user) {
+    User.findByIdAndUpdate(req.body.user, {$push: {resumes: resume._id}, $set: {role: 'jobHunter'}}, function (err, user) {
       if (err) {
         res.json(400);
       }
 
-      res.json(user);
+      User.findById(req.body.user)
+        .populate('resumes')
+        .exec(function (err, rUser) {
+          res.json(rUser);
+        });
     });
   });
 };

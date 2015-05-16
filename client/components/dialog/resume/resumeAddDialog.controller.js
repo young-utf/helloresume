@@ -15,6 +15,8 @@ angular.module('HRApp')
       value: 'portfolio'
     }];
 
+    $scope.selectedUser = $scope.userList[$scope.userIndex];
+
     $scope.submit = function (e) {
       e.preventDefault();
       console.log($scope.selectedUser);
@@ -25,6 +27,7 @@ angular.module('HRApp')
         paid: true
       }, function (data) {
         console.log(data);
+        $scope.userList[$scope.userIndex] = data;
       });
     }
   });

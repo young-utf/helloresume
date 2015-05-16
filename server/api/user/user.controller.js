@@ -14,7 +14,7 @@ var Ninja = require('tracer').console({
 exports.index = function (req, res) {
   var promise = User.find({})
     .sort({joined: 1})
-    //.populate('resumes')
+    .populate('resumes')
     .exec();
   promise.then(function (users) {
     res.json(users);

@@ -9,6 +9,7 @@ angular.module('HRApp')
     }
 
     Users.get(function (data) {
+      console.log(data);
       $scope.userList = data;
     });
 
@@ -16,13 +17,13 @@ angular.module('HRApp')
       return (new Date(data)).toLocaleString();
     };
 
-    $scope.showResume = function (user) {
-      $scope.selectedUser = user;
+    $scope.showResume = function (index) {
+      $scope.userIndex = index;
       Dialog.openResumes($scope);
     };
 
-    $scope.addResume = function (user) {
-      $scope.selectedUser = user;
+    $scope.addResume = function (index) {
+      $scope.userIndex= index;
       Dialog.addResume($scope);
     };
   });
