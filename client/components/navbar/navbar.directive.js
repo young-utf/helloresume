@@ -7,7 +7,7 @@ angular.module('HRApp')
     return {
       restrict: 'E',
       templateUrl: 'components/navbar/navbar.html',
-      controller: function ($scope, Auth, $http) {
+      controller: function ($scope, $location, Auth) {
         $scope.isLogin = function () {
           return Auth.isLogin();
         };
@@ -16,10 +16,8 @@ angular.module('HRApp')
           Auth.logout();
         };
 
-        $scope.getUserInfo = function () {
-          $http.get('/api/users/').success(function (data) {
-            console.log(data);
-          });
+        $scope.toUser = function (c) {
+          $location.path('/u/' + c._id);
         };
       }
     }

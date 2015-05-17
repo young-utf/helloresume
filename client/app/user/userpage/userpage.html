@@ -1,10 +1,12 @@
 <navbar></navbar>
 
 <div class="userpage">
-  <div class="panel panel-warning">
+  <div class="panel panel-warning up-resumeList">
     <div class="panel-heading">My Resumes</div>
     <div class="panel-body">
-
+      <div class="up-myResumes" ng-repeat="resume in currentUser.resumes">
+        <span class="up-mr-sort">{{resume.sort}}</span>
+      </div>
     </div>
   </div>
 </div>

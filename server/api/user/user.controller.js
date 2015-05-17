@@ -63,12 +63,14 @@ exports.create = function (req, res) {
 exports.getOne = function (req, res) {
   var userId = req.params.id;
 
-  User.findById(userId, function (err, user) {
-    if (user) {
-      Ninja.debug(user);
-      res.json(user);
-    } else {
-      res.status(404).json({name: 'no user', message: 'No User found'});
-    }
-  });
+  User.findById(userId)
+    .populate('resumes')
+    .exec(function (err, user) {
+      if (user) {
+        Ninja.debug(user);
+        res.json(user);
+      } else {
+        res.status(404).json({name: 'no user', message: 'No User found'});
+      }
+    });
 };
