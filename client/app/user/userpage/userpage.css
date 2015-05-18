@@ -48,7 +48,33 @@
   color: #6190af;
 }
 
+.up-mi-name .up-mi-title {
+  height: 35px;
+  line-height: 35px;
+}
+
+.up-mi-email .up-mi-title {
+  height: 35px;
+  line-height: 35px;
+}
+
 .up-mi-content {
   width: 85%;
   float: right;
+}
+
+.up-mi-content input {
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  padding-left: 10px;
+  font-size: 16px;
+}
+
+.up-mi-name input[type="text"] {
+  width: 220px;
+}
+
+.up-mi-email input[type="email"] {
+  width: 220px;
 }
