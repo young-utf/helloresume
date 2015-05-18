@@ -1,4 +1,33 @@
+.userpage {
+  width: 100%;
+  float: left;
+}
+
 .up-resumeList {
-  width: 85%;
-  margin: 20px auto;
+  width: 30%;
+  float: left;
+  margin: 50px 1% 20px 2%;
+}
+
+.up-myinfo {
+  width: 64%;
+  float: left;
+  margin: 50px 2% 20px 1%;
+}
+
+.up-mr-sort {
+  background: #aaa;
+  padding: 8px 10px;
+  border-radius: 15px;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+}
+
+.up-resumeList .panel-body {
+  padding: 20px;
+}
+
+.up-myinfo .panel-body {
+  padding: 20px;
 }
