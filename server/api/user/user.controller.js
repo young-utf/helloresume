@@ -22,7 +22,7 @@ exports.index = function (req, res) {
 };
 
 exports.login = function (req, res) {
-  var promise = User.findOne({email: req.body.email}).exec();
+  var promise = User.findOne({email: req.body.email}).populate('resumes').exec();
   promise.then(function (user) {
     if (user) {
       var result = user.authenticate(req.body.password);
