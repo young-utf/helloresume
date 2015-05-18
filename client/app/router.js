@@ -9,6 +9,10 @@ angular.module('HRApp')
         templateUrl: 'app/main/main.html',
         controller: 'MainCtrl'
       })
+      .when('/about', {
+        templateUrl: 'app/about/about.html',
+        controller: 'AboutCtrl'
+      })
       .when('/join', {
         templateUrl: 'app/user/join/join.html',
         controller: 'JoinCtrl'
