@@ -5,4 +5,7 @@
 angular.module('HRApp')
   .controller('UserpageCtrl', function ($rootScope, $scope) {
     console.log($rootScope.currentUser);
+
+    $scope.tUser = $rootScope.currentUser;
+
   });

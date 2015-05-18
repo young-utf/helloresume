@@ -15,9 +15,25 @@
   <div class="panel panel-info up-myinfo">
     <div class="panel-heading">My Info</div>
     <div class="panel-body">
-      <div class="up-mi-name">
-        이름 : {{currentUser.name}}
+
+      <div class="up-mi-name up-mi-section">
+        <div class="up-mi-title">
+          이름
+        </div>
+        <div class="up-mi-content">
+          <input type="text" ng-model="tUser.name"/>
+        </div>
       </div>
+
+      <div class="up-mi-email up-mi-section">
+        <div class="up-mi-title">
+          이메일
+        </div>
+        <div class="up-mi-content">
+          <input type="email" ng-model="tUser.email"/>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>

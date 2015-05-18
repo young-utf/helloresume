@@ -31,3 +31,24 @@
 .up-myinfo .panel-body {
   padding: 20px;
 }
+
+.up-mi-section {
+  width: 100%;
+  float: left;
+  padding: 15px 0px;
+  border: none;
+  border-bottom: solid 1px #bce8f1;
+}
+
+.up-mi-title {
+  width: 15%;
+  float: left;
+  font-size: 20px;
+  text-align: center;
+  color: #6190af;
+}
+
+.up-mi-content {
+  width: 85%;
+  float: right;
+}
