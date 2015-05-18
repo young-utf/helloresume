@@ -4,7 +4,6 @@
 
 angular.module('HRApp')
   .controller('UserpageCtrl', function ($rootScope, $scope, Dialog) {
-    console.log($rootScope.currentUser);
 
     $scope.tUser = $.extend({},$rootScope.currentUser);
 

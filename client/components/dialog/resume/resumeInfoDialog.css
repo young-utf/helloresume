@@ -1,0 +1,53 @@
+div.ngdialog.resumeInfoDialogWrap {
+  padding-top: 110px;
+}
+
+div.ngdialog.resumeInfoDialogWrap .ngdialog-content {
+  width: 540px;
+}
+
+.resumeInfo {
+  padding: 20px;
+}
+
+.resumeInfo .rI-header {
+  font-size: 20px;
+  text-align: center;
+  padding: 10px 0px;
+}
+
+.resumeInfo .rI-body {
+  position: relative;
+  padding-top: 30px;
+}
+
+.resumeInfo .rI-body > div {
+  display: inline-block;
+  text-align: center;
+}
+
+.resumeInfo .rI-type-simple {
+  width: 160px;
+}
+
+.resumeInfo .rI-type-fancy {
+  width: 160px;
+}
+
+.resumeInfo .rI-type-portfolio {
+  width: 140px;
+}
+
+.resumeInfo .rI-type-icon {
+  font-size: 40px;
+}
+
+.resumeInfo .rI-type-icon div {
+  padding-top: 15px;
+  margin-bottom: -7px;
+  font-size: 20px;
+}
+
+.resumeInfo .rI-type-icon span {
+  font-size: 13px;
+}
