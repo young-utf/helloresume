@@ -21,6 +21,15 @@ angular.module('HRApp')
           controller: 'ResumeAddDialogCtrl',
           scope: scope
         });
+      },
+
+      infoResume: function (scope) {
+        ngDialog.open({
+          template: 'components/dialog/resume/resumeInfoDialog.html',
+          className: 'resumeInfoDialogWrap ngdialog-theme-default',
+          controller: 'ResumeInfoDialogCtrl',
+          scope: scope
+        });
       }
     }
   });

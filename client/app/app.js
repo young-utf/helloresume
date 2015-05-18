@@ -47,6 +47,8 @@ angular.module('HRApp', [
         if (user) {
           Auth.login(user);
         }
+      }, function () {
+        Auth.logout();
       });
     }
   });

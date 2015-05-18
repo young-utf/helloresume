@@ -3,9 +3,20 @@
  */
 
 angular.module('HRApp')
-  .controller('UserpageCtrl', function ($rootScope, $scope) {
+  .controller('UserpageCtrl', function ($rootScope, $scope, Dialog) {
     console.log($rootScope.currentUser);
 
-    $scope.tUser = $rootScope.currentUser;
+    $scope.tUser = $.extend({},$rootScope.currentUser);
 
+    $scope.emailAuth = function () {
+
+    };
+
+    $scope.addResume = function () {
+      Dialog.infoResume($scope);
+    };
+
+    $scope.cancel = function () {
+      $scope.tUser = $.extend({},$rootScope.currentUser);
+    }
   });

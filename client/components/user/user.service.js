@@ -19,9 +19,11 @@ angular.module('HRApp')
         });
       },
 
-      getOne: function (token, cb) {
+      getOne: function (token, successCB, errorCB) {
         $http.get('/api/users/' + token).success(function (data) {
-          cb(data);
+          successCB(data);
+        }).error(function (data) {
+          errorCB(data);
         });
       },
 

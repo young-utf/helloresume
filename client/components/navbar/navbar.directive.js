@@ -15,10 +15,6 @@ angular.module('HRApp')
         $scope.logout = function () {
           Auth.logout();
         };
-
-        $scope.toUser = function (c) {
-          $location.path('/u/' + c._id);
-        };
       }
     }
   });

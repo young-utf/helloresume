@@ -32,10 +32,19 @@
   padding: 20px;
 }
 
+.up-noResume {
+  padding: 30px 0px;
+  text-align: center;
+}
+
+.up-noResume h3 {
+  margin: 0px auto 20px auto;
+}
+
 .up-mi-section {
   width: 100%;
   float: left;
-  padding: 15px 0px;
+  padding: 20px 0px;
   border: none;
   border-bottom: solid 1px #bce8f1;
 }
@@ -58,9 +67,21 @@
   line-height: 35px;
 }
 
+.up-mi-auth .up-mi-title {
+  height: 35px;
+  line-height: 35px;
+}
+
+.up-mi-email span {
+  height: 35px;
+  line-height: 35px;
+  font-size: 17px;
+}
+
 .up-mi-content {
   width: 85%;
   float: right;
+  padding-left: 15px;
 }
 
 .up-mi-content input {
@@ -77,4 +98,15 @@
 
 .up-mi-email input[type="email"] {
   width: 220px;
+}
+
+.up-mi-submit {
+  width: 100%;
+  float: left;
+  padding: 20px;
+  text-align: right;
+}
+
+.up-mi-submit input {
+  width: 120px;
 }

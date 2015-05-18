@@ -10,7 +10,7 @@ angular.module('HRApp')
       e.preventDefault();
       Users.create($scope.user, function (data) {
         Auth.login(data);
-        $location.path('/u/' + $rootScope.currentUser._id);
+        $location.path('/mypage');
       });
     };
   });

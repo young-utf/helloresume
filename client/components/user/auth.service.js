@@ -9,7 +9,6 @@ angular.module('HRApp')
       login: function (user) {
         this.setToken(user);
         this.setCurrentUser(user);
-        //$location.path('/u/' + user._id);
       },
 
       logout: function () {

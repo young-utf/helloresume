@@ -22,12 +22,13 @@ exports.index = function (req, res) {
 };
 
 exports.login = function (req, res) {
-  var promise = User.findOne({email: req.body.email}).populate('resumes').exec();
+  var promise = User.findOne({email: req.body.email}).select('+hashedPassword +salt').populate('resumes').exec();
   promise.then(function (user) {
     if (user) {
       var result = user.authenticate(req.body.password);
-      Ninja.debug(result);
       if (result) {
+        delete user.hashedPassword;
+        delete user.salt;
         res.json(user);
       } else {
         res.status(404).json({name: 'Password', message: 'Wrong Password'})

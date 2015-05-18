@@ -10,9 +10,23 @@ var crypto = require('crypto');
 var UserSchema = new Schema({
   name: String,
   profileImage: String,
-  email: String,
-  hashedPassword: String,
-  salt: String,
+  email: {
+    type: String,
+    required: true,
+    index: true
+  },
+  emailAuth: {
+    type: Boolean,
+    default: false
+  },
+  hashedPassword: {
+    type: String,
+    select: false
+  },
+  salt: {
+    type: String,
+    select: false
+  },
   role: {
     type: String,
     default: 'user'

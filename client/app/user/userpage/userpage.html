@@ -9,31 +9,53 @@
         <span class="up-mr-url">{{resume.url || ''}}</span>
         <button class="btn btn-success">Edit</button>
       </div>
+      <div class="up-noResume" ng-if="currentUser.resumes.length === 0">
+        <h3>이력서가 없습니다.</h3>
+        <button class="btn btn-warning" ng-click="addResume()">이력서 만들기</button>
+      </div>
     </div>
   </div>
 
   <div class="panel panel-info up-myinfo">
     <div class="panel-heading">My Info</div>
     <div class="panel-body">
+      <form ng-action="submit($event)">
 
-      <div class="up-mi-name up-mi-section">
-        <div class="up-mi-title">
-          이름
+        <div class="up-mi-name up-mi-section">
+          <div class="up-mi-title">
+            이름
+          </div>
+          <div class="up-mi-content">
+            <input type="text" ng-model="tUser.name" placeholder="이름을 여기에 입력해주세요."/>
+          </div>
         </div>
-        <div class="up-mi-content">
-          <input type="text" ng-model="tUser.name" placeholder="이름을 여기에 입력해주세요."/>
-        </div>
-      </div>
 
-      <div class="up-mi-email up-mi-section">
-        <div class="up-mi-title">
-          이메일
+        <div class="up-mi-email up-mi-section">
+          <div class="up-mi-title">
+            이메일
+          </div>
+          <div class="up-mi-content">
+            <span>{{tUser.email}}</span>
+          </div>
         </div>
-        <div class="up-mi-content">
-          <input type="email" ng-model="tUser.email" placeholder="이메일을 여기에 입력해주세요."/>
-        </div>
-      </div>
 
+        <div class="up-mi-auth up-mi-section">
+          <div class="up-mi-title">
+            이메일 인증
+          </div>
+          <div class="up-mi-content">
+            <form ng-action="emailAuth()">
+              <input type="submit" class="btn btn-default" value="인증하기"/>
+            </form>
+          </div>
+        </div>
+
+        <div class="up-mi-submit">
+          <input type="button" class="btn btn-default" value="취소" ng-click="cancel()"/>
+          <input type="submit" class="btn btn-info" value="정보 수정"/>
+        </div>
+
+      </form>
     </div>
   </div>
 </div>

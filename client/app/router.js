@@ -29,6 +29,10 @@ angular.module('HRApp')
         templateUrl: 'app/admin/adminMain/adminMain.html',
         controller: 'AdminMainCtrl'
       })
+      .when('/mypage', {
+        templateUrl: 'app/user/userpage/userpage.html',
+        controller: 'UserpageCtrl'
+      })
       .when('/:resume', {
         templateUrl: 'app/resumeManager/resumeDetail/resumeDetail.html',
         controller: 'ResumeDetailCtrl',
@@ -42,10 +46,6 @@ angular.module('HRApp')
       .when('/form/:rId', {
         templateUrl: 'app/resumeManager/resumeForm/simple/simpleForm.html',
         controller: 'ResumeSimpleCtrl'
-      })
-      .when('/u/:url', {
-        templateUrl: 'app/user/userpage/userpage.html',
-        controller: 'UserpageCtrl'
       })
       .otherwise({
         redirectTo: '/'

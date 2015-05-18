@@ -3,8 +3,13 @@
  */
 
 angular.module('HRApp')
-  .controller('AdminMainCtrl', function ($rootScope, $scope, Users, Dialog) {
-    if ($rootScope.currentUser.role === 'admin') {
+  .controller('AdminMainCtrl', function ($rootScope, $scope, $location, Users, Dialog) {
+
+    if ($.isEmptyObject($rootScope.currentUser)) {
+      $location.path('/');
+    }
+
+    if ($rootScope.currentUser && $rootScope.currentUser.role === 'admin') {
       $scope.adminUser = true;
     }
 
