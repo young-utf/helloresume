@@ -22,12 +22,15 @@ exports.getResumeById = function (req, res) {
 };
 
 exports.getResumeByUrl = function (req, res) {
-  Resume.findOne(req.params.rUrl, function (err, resume) {
-    if (err) {
-      res.status(404).json({message: err});
-    }
-    res.json(resume);
-  });
+  Ninja.debug('hello ?');
+  Resume.findById(req.params.rId)
+    .populate('user')
+    .exec(function (err, resume) {
+      if (err || !resume) {
+        res.status(404)
+      }
+      res.json(resume);
+    });
 };
 
 exports.createResume = function (req, res) {

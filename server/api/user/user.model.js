@@ -8,7 +8,10 @@ var Schema = mongoose.Schema;
 var crypto = require('crypto');
 
 var UserSchema = new Schema({
-  name: String,
+  name: {
+    type: String,
+    index: true
+  },
   profileImage: String,
   email: {
     type: String,
@@ -29,14 +32,21 @@ var UserSchema = new Schema({
   },
   role: {
     type: String,
-    default: 'user'
+    default: 'user',
+    index: true
   },
   sns: {
     sort: String,
     id: String
   },
-  url: String,
-  job: [String],
+  url: {
+    type: String,
+    index: true
+  },
+  job: [{
+    type: String,
+    index: true
+  }],
   joined: {
     type: Date,
     default: Date.now
@@ -45,7 +55,8 @@ var UserSchema = new Schema({
     {
       type: String,
       resume: String,
-      ref: 'Resume'
+      ref: 'Resume',
+      index: true
     }
   ],
   checkList: [

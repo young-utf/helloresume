@@ -6,6 +6,7 @@
   <ul class="hr-nav-ul" id="top-menu">
     <li class="active"><a href="/">Home</a></li>
     <li><a href="/about">About</a></li>
+    <li ng-if="currentUser.role === 'admin'"><a href="/admin">sss</a></li>
   </ul>
 
   <ul class="hr-nav-ul hr-nb-user" ng-if="isLogin()">

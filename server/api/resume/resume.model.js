@@ -15,7 +15,8 @@ var Schema = mongoose.Schema;
 var ResumeSchema = new Schema({
   user: {
     type: String,
-    ref: 'User'
+    ref: 'User',
+    index: true
   },
   requestedAt: {
     type: Date,
@@ -24,7 +25,10 @@ var ResumeSchema = new Schema({
   publishedAt: {
     type: Date
   },
-  sort: String,
+  sort: {
+    type: String,
+    index: true
+  },
   paid: Boolean,
   // Process is divided to new, processing, done
   process: {
@@ -42,7 +46,10 @@ var ResumeSchema = new Schema({
       ref: 'User'
     }
   ],
-  url: String,
+  url: {
+    type: String,
+    index: true
+  },
 
 
 

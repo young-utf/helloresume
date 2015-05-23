@@ -15,15 +15,6 @@
   margin: 50px 2% 20px 1%;
 }
 
-.up-mr-sort {
-  background: #aaa;
-  padding: 8px 10px;
-  border-radius: 15px;
-  color: white;
-  font-size: 15px;
-  text-align: center;
-}
-
 .up-resumeList .panel-body {
   padding: 20px;
 }
@@ -32,13 +23,30 @@
   padding: 20px;
 }
 
+.up-myResumes {
+  border: 1px solid #faebcc;
+  padding: 10px 5px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.up-myResumes span {
+  font-size: 13px;
+}
+
 .up-noResume {
-  padding: 30px 0px;
+  padding: 30px 0px 20px 0px;
   text-align: center;
 }
 
 .up-noResume h3 {
   margin: 0px auto 20px auto;
+}
+
+.up-hasResume {
+  padding: 10px 0px 10px 0px;
+  text-align: center;
 }
 
 .up-mi-section {
