@@ -50,7 +50,109 @@ var ResumeSchema = new Schema({
     type: String,
     index: true
   },
+  statusBar: {
+    basic: {
+      have: {
+        type: Boolean,
+        default: true
+      },
+      done: {
+        type: Boolean,
+        default: false
+      }
+    },
+    education: {
+      have: {
+        type: Boolean,
+        default: true
+      },
+      done: {
+        type: Boolean,
+        default: false
+      }
+    },
+    work: {
+      have: {
+        type: Boolean,
+        default: true
+      },
+      done: {
+        type: Boolean,
+        default: false
+      }
+    },
+    volunteer: {
+      have: {
+        type: Boolean,
+        default: true
+      },
+      done: {
+        type: Boolean,
+        default: false
+      }
+    },
+    awards: {
+      have: {
+        type: Boolean,
+        default: true
+      },
+      done: {
+        type: Boolean,
+        default: false
+      }
+    },
+    skills: {
+      have: {
+        type: Boolean,
+        default: true
+      },
+      done: {
+        type: Boolean,
+        default: false
+      }
+    },
+    language: {
+      have: {
+        type: Boolean,
+        default: true
+      },
+      done: {
+        type: Boolean,
+        default: false
+      }
+    },
+    interests: {
+      have: {
+        type: Boolean,
+        default: true
+      },
+      done: {
+        type: Boolean,
+        default: false
+      }
+    },
+    publications: {
+      have: {
+        type: Boolean,
+        default: true
+      },
+      done: {
+        type: Boolean,
+        default: false
+      }
+    },
+    references: {
+      have: {
+        type: Boolean,
+        default: true
+      },
+      done: {
+        type: Boolean,
+        default: false
+      }
+    }
 
+  },
 
 
   basic: {

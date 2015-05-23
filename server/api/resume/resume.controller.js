@@ -19,6 +19,7 @@ exports.getResumeById = function (req, res) {
       if (err || !resume) {
         res.status(404)
       }
+      Ninja.debug(resume);
       res.json(resume);
     });
 };

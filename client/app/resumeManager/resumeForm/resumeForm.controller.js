@@ -7,6 +7,7 @@ angular.module('HRApp')
     $scope.fResume = $.extend({}, ResumeService.getResume());
     console.log($scope.fResume);
 
+    
 
 
 
