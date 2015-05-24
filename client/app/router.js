@@ -36,7 +36,6 @@ angular.module('HRApp')
       .when('/write/:resume', {
         //templateUrl: 'app/resumeManager/resumeForm/resumeForm.html',
         template: '<resume-form></resume-form>',
-        controller: 'ResumeFormCtrl',
         resolve: {
           wait: function ($route, ResumeService) {
             if(!$route.current.params) return true;

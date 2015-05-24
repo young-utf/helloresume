@@ -32,6 +32,7 @@
 .rf-status.rf-st-active span {
   border-color: #FFA000;
   color: #FFA000;
+  background: white;
   transition: all 1s;
 }
 
@@ -51,7 +52,7 @@
 }
 
 .rf-content {
-  /*position: relative;*/
+  position: relative;
   width: 100%;
   margin-top: 20px;
   margin-bottom: 100px;
@@ -59,14 +60,15 @@
 
 .rf-content-wrap {
   position: absolute;
+  left: 5%;
   width: 90%;
   margin: 0 auto;
-  left: 5%;
-  -webkit-transition: left 0.6s;
-  -moz-transition: left 0.6s;
-  -ms-transition: left 0.6s;
-  -o-transition: left 0.6s;
-  transition: left 0.6s;
+  border-radius: 10px;
+  -webkit-transition: left 0.6s ease-in-out;
+  -moz-transition: left 0.6s ease-in-out;
+  -ms-transition: left 0.6s ease-in-out;
+  -o-transition: left 0.6s ease-in-out;
+  transition: left 0.6s ease-in-out;
 }
 
 .rf-content-wrap:nth-of-type(even) {
@@ -82,6 +84,18 @@
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+}
+
+.rf-ct-basic-snsList span i {
+  font-size: 30px;
+}
+
+.rf-ct-basic-snsList span i.fa-facebook-official.rf-basic-sns-active {
+  color: #3a5795;
+}
+
+ .rf-ct-basic-snsList span i.fa-twitter.rf-basic-sns-active {
+   color: #2b7bb9;
 }
 
 .rf-btns {

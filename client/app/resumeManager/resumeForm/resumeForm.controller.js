@@ -13,6 +13,7 @@ angular.module('HRApp')
     $scope.statusListKor = ['기본', '교육', '경력', '봉사','수상','기술','언어','관심','출판','추천'];
 
 
+
     $.map($scope.statusList, function (stat) {
       if ($scope.r.statusBar[stat].done || !$scope.r.statusBar[stat].have) {
         $scope.status++;
@@ -38,7 +39,14 @@ angular.module('HRApp')
 
     $scope.positioning = function (index) {
       return (5 + (index * 90)) - ($scope.status * 90);
-    }
+    };
 
+    $scope.minHeight = function () {
+      return $('.rf-content-' + $scope.statusList[$scope.status]).height() + 'px';
+    };
+
+    $scope.addSns = function () {
+
+    };
 
   });
