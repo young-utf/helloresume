@@ -116,6 +116,11 @@
   font-size: 30px;
 }
 
+.rf-ct-basic-about textarea {
+  height: 100px;
+  resize: none;
+}
+
 .rf-btns {
   padding: 10px 30px;
   width: 100%;
