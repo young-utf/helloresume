@@ -51,6 +51,10 @@
   font-size: 30px;
 }
 
+.rf-title-warn {
+  text-align: center;
+}
+
 .rf-content {
   position: relative;
   width: 100%;
@@ -86,16 +90,30 @@
   border-radius: 5px;
 }
 
+.rf-ct-basic-snsList {
+  padding: 20px;
+  width: 100%;
+}
+
+.rf-ct-basic-snsList table {
+  width: 100%;
+}
+
+.rf-ct-basic-snsList tr {
+  height: 50px;
+}
+
+.rf-ct-basic-snsList th {
+  width: 10%;
+  text-align: center;
+}
+
+.rf-ct-basic-snsList td input {
+  width: 100%;
+}
+
 .rf-ct-basic-snsList span i {
   font-size: 30px;
-}
-
-.rf-ct-basic-snsList span i.fa-facebook-official.rf-basic-sns-active {
-  color: #3a5795;
-}
-
- .rf-ct-basic-snsList span i.fa-twitter.rf-basic-sns-active {
-   color: #2b7bb9;
 }
 
 .rf-btns {

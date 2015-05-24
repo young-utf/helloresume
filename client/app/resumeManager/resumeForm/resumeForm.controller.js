@@ -45,7 +45,7 @@ angular.module('HRApp')
       return $('.rf-content-' + $scope.statusList[$scope.status]).height() + 'px';
     };
 
-    $scope.addSns = function () {
+    $scope.addSns = function (sns) {
 
     };
 

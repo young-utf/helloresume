@@ -23,6 +23,9 @@
   <div class="rf-title">
     {{statusListKor[status] + ' 정보 입력'}}
   </div>
+  <div class="rf-title-warn">
+    모든 정보는 기입하지 않으면 이력서에 나타나지 않으니, 원치 않으시면 란을 비워두시면 됩니다. :"D
+  </div>
 
   <div class="rf-content" style="min-height: {{minHeight()}};">
     <div class="rf-content-wrap rf-content-{{rContent}}" ng-repeat="rContent in statusList" style="
@@ -60,9 +63,20 @@
         <div class="form-group">
           <label>SNS 연동</label>
           <div class="rf-ct-basic-snsList">
-            <span><i class="fa fa-facebook-official rf-basic-sns-active"></i></span>
-            <span><i class="fa fa-twitter"></i></span>
-            <span><i class="fa fa-instagram"></i></span>
+            <table>
+              <tr>
+                <th><span><i class="fa fa-facebook"></i></span></th>
+                <td><input type="text" class="form-control" placeholder="페이스북과 연결하려면 자신의 페이스북 url 을 입력해주세요 EX) http://facebook.com/xxxx"/></td>
+              </tr>
+              <tr>
+                <th><span><i class="fa fa-twitter"></i></span></th>
+                <td><input type="text" class="form-control" placeholder="트위터와 연결하려면 자신의 트위터 url 을 입력해주세요 EX) http://twitter.com/xxxx"/></td>
+              </tr>
+              <tr>
+                <th><span><i class="fa fa-instagram"></i></span></th>
+                <td><input type="text" class="form-control" placeholder="인스타그램과 연결하려면 자신의 인스타그램 url 을 입력해주세요 EX) http://instagram.com/xxxx"/></td>
+              </tr>
+            </table>
           </div>
           <div class="form-group rf-ct-basic-sns" ng-repeat="profile in r.basic.profiles">
             <input type="text" class="form-control" ng-model="profile.network" placeholder="입력해주세요."/>
