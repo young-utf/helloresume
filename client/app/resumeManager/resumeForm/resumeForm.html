@@ -2,23 +2,62 @@
 
 <section class="resumeFrom-wrap">
   <div class="rf-statusBar">
-    <div class="rf-status rf-st-basic">b</div>
-    <div class="rf-status rf-st-education">b</div>
-    <div class="rf-status rf-st-work">b</div>
-    <div class="rf-status rf-st-volunteer">b</div>
-    <div class="rf-status rf-st-awards">b</div>
-    <div class="rf-status rf-st-skills">b</div>
-    <div class="rf-status rf-st-language">b</div>
-    <div class="rf-status rf-st-interest">b</div>
-    <div class="rf-status rf-st-publications">b</div>
-    <div class="rf-status rf-st-references">b</div>
+    <div class="rf-st-table">
+      <div class="rf-st-row">
+        <div class="rf-status rf-st-basic rf-st-active" ng-click="statusTo(0)"><span>기본</span></div>
+        <div class="rf-status rf-st-education" ng-click="statusTo(1)"><span>교육</span></div>
+        <div class="rf-status rf-st-work" ng-click="statusTo(2)"><span>경력</span></div>
+        <div class="rf-status rf-st-volunteer" ng-click="statusTo(3)"><span>봉사</span></div>
+        <div class="rf-status rf-st-awards" ng-click="statusTo(4)"><span>수상</span></div>
+        <div class="rf-status rf-st-skills" ng-click="statusTo(5)"><span>기술</span></div>
+        <div class="rf-status rf-st-language" ng-click="statusTo(6)"><span>언어</span></div>
+        <div class="rf-status rf-st-interests" ng-click="statusTo(7)"><span>관심</span></div>
+        <div class="rf-status rf-st-publications" ng-click="statusTo(8)"><span>출판</span></div>
+        <div class="rf-status rf-st-references" ng-click="statusTo(9)"><span>추천</span></div>
+      </div>
+    </div>
   </div>
 
   <div class="rf-backbtn"></div>
 
   <div class="rf-title">
-
+    {{statusListKor[status] + ' 정보 입력'}}
   </div>
 
-  <div class="rf-content"></div>
+  <div class="rf-content">
+    <div class="rf-content-wrap rf-content-{{rContent}}" ng-repeat="rContent in statusList" style="
+    left:{{positioning($index)}}%;">
+
+      <div class="rf-ct-form" ng-if="rContent == 'basic'">
+        <div class="form-group">
+          <label>이름</label>
+          <input type="text" class="form-control" ng-model="r.basic.name" placeholder="이름을 입력해주세요."/>
+        </div>
+        <div class="form-group">
+          <label>이름</label>
+          <input type="text" class="form-control" ng-model="r.basic.name" placeholder="이름을 입력해주세요."/>
+        </div>
+        <div class="form-group">
+          <label>이름</label>
+          <input type="text" class="form-control" ng-model="r.basic.name" placeholder="이름을 입력해주세요."/>
+        </div>
+        <div class="form-group">
+          <label>이름</label>
+          <input type="text" class="form-control" ng-model="r.basic.name" placeholder="이름을 입력해주세요."/>
+        </div>
+        <div class="form-group">
+          <label>이름</label>
+          <input type="text" class="form-control" ng-model="r.basic.name" placeholder="이름을 입력해주세요."/>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="rf-btns navbar">
+    <div class="navbar-right">
+      <button class="btn btn-default">입력취소</button>
+      <button class="btn btn-primary">저장하기</button>
+    </div>
+  </div>
 </section>

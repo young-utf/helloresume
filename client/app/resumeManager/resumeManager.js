@@ -10,7 +10,6 @@ angular.module('HRApp')
         var deferred = $q.defer();
 
         if (type === 'name') {
-          //$http.get('/api/resumes')
         } else if (type === 'rId') {
           return $http.get('/api/resumes/id/' + target).success(function (data) {
             resume = data;

@@ -34,12 +34,13 @@ angular.module('HRApp')
         controller: 'UserpageCtrl'
       })
       .when('/write/:resume', {
-        templateUrl: 'app/resumeManager/resumeForm/resumeForm.html',
+        //templateUrl: 'app/resumeManager/resumeForm/resumeForm.html',
+        template: '<resume-form></resume-form>',
         controller: 'ResumeFormCtrl',
         resolve: {
           wait: function ($route, ResumeService) {
             if(!$route.current.params) return true;
-            ResumeService.waitResume('rId', $route.current.params.resume);
+            return ResumeService.waitResume('rId', $route.current.params.resume);
           }
         }
       })

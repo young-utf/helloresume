@@ -1,5 +1,94 @@
 .rf-statusBar {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.rf-st-table {
+  width: 100%;
+  display: table;
+}
+
+.rf-st-row {
   display: table-row;
+}
+
+.rf-status {
+  display: table-cell;
+  height: 50px;
+  line-height: 50px;
+  background: #FFECB3;
+  text-align: center;
+  color: #FFC107;
+  cursor: pointer;
+}
+
+.rf-status span {
+  display: inline-block;
+  width: 70%;
+  border: 2px solid #FFECB3;
+  border-radius: 50px;
+}
+
+.rf-status.rf-st-active span {
+  border-color: #FFA000;
+  color: #FFA000;
+  transition: all 1s;
+}
+
+.rf-st-basic {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.rf-st-references {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.rf-title {
+  text-align: center;
+  font-size: 30px;
+}
+
+.rf-content {
+  /*position: relative;*/
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+.rf-content-wrap {
+  position: absolute;
   width: 90%;
   margin: 0 auto;
+  left: 5%;
+  -webkit-transition: left 0.6s;
+  -moz-transition: left 0.6s;
+  -ms-transition: left 0.6s;
+  -o-transition: left 0.6s;
+  transition: left 0.6s;
+}
+
+.rf-content-wrap:nth-of-type(even) {
+  background: #efefef;
+}
+
+.rf-content-wrap:nth-of-type(odd) {
+  background: #f4f4f4;
+}
+
+.rf-ct-form {
+  padding: 30px 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.rf-btns {
+  padding: 10px 30px;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  margin: 0;
+  background-color: #E6E6E6;
 }
