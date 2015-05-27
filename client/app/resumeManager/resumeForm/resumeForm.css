@@ -68,10 +68,6 @@
   width: 90%;
   margin: 0 auto;
   border-radius: 10px;
-  -webkit-transition: left 0.6s ease-in-out;
-  -moz-transition: left 0.6s ease-in-out;
-  -ms-transition: left 0.6s ease-in-out;
-  -o-transition: left 0.6s ease-in-out;
   transition: left 0.6s ease-in-out;
 }
 
@@ -85,8 +81,6 @@
 
 .rf-ct-form {
   padding: 30px 20px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
   border-radius: 5px;
 }
 
