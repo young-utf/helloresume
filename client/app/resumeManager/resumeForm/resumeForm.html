@@ -28,8 +28,8 @@
   </div>
 
   <div class="rf-content" style="min-height: {{minHeight()}};">
-    <div class="rf-content-wrap rf-content-{{rContent}}" ng-repeat="rContent in statusList" style="
-    left:{{positioning($index)}}%;">
+    <div class="rf-content-wrap rf-ct-{{rContent}}" ng-repeat="rContent in statusList" style="
+    left:{{positioning($index)}}%;" ng-click="contentClicked($index)">
 
       <div class="rf-ct-form" ng-if="rContent == 'basic'">
         <div class="form-group">
@@ -83,6 +83,18 @@
           <label>나에 대해서</label>
           <textarea class="form-control" ng-model="f.basic.about" placeholder="자신의 성격이나, 살아온 배경같은 정보들을 적어주세요."></textarea>
         </div>
+      </div>
+
+      <div class="rf-ct-form" ng-if="rContent == 'education'">
+        <div class="rf-ct-rotate" ng-repeat="edu in r.education">
+          <div class="form-group">
+            <label>기관</label>
+            
+          </div>
+        </div>
+        <div class="rf-ct-edu-add">
+          <div class="btn btn-warning" ng-click="addEduInfo()">이력 추가하기</div>
+      </div>
       </div>
 
     </div>

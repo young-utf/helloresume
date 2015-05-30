@@ -207,11 +207,8 @@ var ResumeSchema = new Schema({
       institution: String,
       area: String,
       studyType: String,
-      duration: String,
-      gpa: String,
-      courses: [
-        String
-      ]
+      startAt: String,
+      endAt: String
     }
   ],
 

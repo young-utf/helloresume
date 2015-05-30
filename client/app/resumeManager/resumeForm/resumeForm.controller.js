@@ -42,6 +42,22 @@ angular.module('HRApp')
     };
 
     $scope.minHeight = function () {
-      return $('.rf-content-' + $scope.statusList[$scope.status]).height() + 'px';
+      return $('.rf-ct-' + $scope.statusList[$scope.status]).height() + 'px';
+    };
+
+    $scope.contentClicked = function (index) {
+      if ($scope.status !== index) {
+        $scope.statusTo(index);
+      }
+    };
+
+    $scope.addEduInfo = function () {
+      $scope.r.education.push({
+        institution: '',
+        area: '',
+        studyType: '',
+        startAt: '',
+        endAt: ''
+      });
     };
   });
